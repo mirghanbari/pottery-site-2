@@ -1,0 +1,24 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-stone-900 font-sans;
+  }
+
+  /* Tailwind preflight resets all heading sizes to inherit — restore sensible defaults */
+  h1 { @apply font-serif text-5xl font-bold; }
+  h2 { @apply font-serif text-4xl font-bold; }
+  h3 { @apply font-serif text-2xl font-semibold; }
+  h4 { @apply font-serif text-xl font-semibold; }
+  h5 { @apply font-serif text-lg font-medium; }
+  h6 { @apply font-serif text-base font-medium; }
+
+  /* All images get rounded corners by default */
+  img {
+    @apply rounded-xl;
+  }
+}

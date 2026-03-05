@@ -1,0 +1,65 @@
+@layer components {
+  /* ── Buttons ─────────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3
+           bg-stone-900 text-white text-sm font-medium rounded-md
+           hover:bg-stone-700 transition-colors;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-3
+           border border-stone-300 text-stone-600 text-sm font-medium rounded-md
+           hover:bg-stone-100 transition-colors;
+  }
+
+  .btn-sm-primary {
+    @apply inline-flex items-center justify-center px-4 py-2
+           bg-stone-900 text-white text-sm font-medium rounded-md
+           hover:bg-stone-700 transition-colors;
+  }
+
+  .btn-sm-outline {
+    @apply inline-flex items-center justify-center px-3 py-1.5
+           border border-stone-300 text-stone-600 text-sm rounded-md
+           hover:bg-stone-50 transition-colors;
+  }
+
+  .btn-disabled {
+    @apply inline-flex items-center justify-center px-4 py-2
+           bg-stone-100 text-stone-400 text-sm font-medium rounded-md
+           cursor-not-allowed;
+  }
+
+  /* ── Cards ───────────────────────────────────────────── */
+  .piece-card {
+    @apply bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .piece-card-image {
+    @apply aspect-square bg-stone-100 overflow-hidden;
+  }
+
+  .piece-card-image img {
+    @apply w-full h-full object-cover hover:scale-105 transition-transform duration-500;
+  }
+
+  /* ── Section typography ───────────────────────────────── */
+  .eyebrow {
+    @apply uppercase tracking-widest text-stone-400 text-xs font-medium;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-stone-900;
+  }
+
+  /* ── Gallery filter pills ─────────────────────────────── */
+  .filter-pill {
+    @apply px-4 py-1.5 rounded-full text-sm transition-colors
+           border border-stone-300 text-stone-600 hover:bg-stone-50;
+  }
+
+  .filter-pill-active {
+    @apply px-4 py-1.5 rounded-full text-sm
+           bg-stone-900 text-white;
+  }
+}

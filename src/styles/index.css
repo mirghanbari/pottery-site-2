@@ -1,0 +1,16 @@
+/* Google Fonts — @import must precede all other rules */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+
+/* Local layers — must be imported before @tailwind directives
+   so Tailwind processes @layer base / @layer components correctly */
+@import './base.css';
+@import './components.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container width override */
+.container {
+  max-width: 1200px;
+}
