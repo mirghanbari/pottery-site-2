@@ -42,7 +42,7 @@ export default function Home() {
           </div>
           <div className="flex-1 w-full lg:h-[60vh] rounded-xl overflow-hidden shadow-xl bg-stone-200">
             <img
-              src="/assets/pottery/art-01.jpg"
+              src={`${import.meta.env.BASE_URL}assets/pottery/art-01.jpg`}
               alt="Featured pottery piece"
               className="w-full h-full object-cover"
             />
