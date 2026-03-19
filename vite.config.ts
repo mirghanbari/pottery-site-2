@@ -65,6 +65,7 @@ export default pieces
 }
 
 export default defineConfig({
+  base: '/pottery-site-2/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
