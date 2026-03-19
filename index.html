@@ -7,6 +7,18 @@
     <meta name="description" content="Handmade ceramics — functional and sculptural pottery in stoneware and porcelain." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      // Restore path redirected via 404.html
+      (function() {
+        var p = window.location.search.slice(1).split('&').reduce(function(a, s) {
+          var r = s.split('='); a[r[0]] = r.slice(1).join('=').replace(/~and~/g, '&'); return a;
+        }, {});
+        if (p.p !== undefined) {
+          var path = p.p + (p.q ? '?' + p.q : '');
+          window.history.replaceState(null, null, path || '/');
+        }
+      }());
+    </script>
   </head>
   <body>
     <div id="root"></div>

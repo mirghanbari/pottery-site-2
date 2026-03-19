@@ -66,7 +66,7 @@ export default function Home() {
             <button key={c.key} onClick={() => navigate(`/gallery?category=${c.key}`)} className="group text-left">
               <div className="relative overflow-hidden rounded-xl aspect-square bg-stone-200 mb-3">
                 <img
-                  src={c.image}
+                  src={`${import.meta.env.BASE_URL}${c.image.replace(/^\//, '')}`}
                   alt={c.label}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
