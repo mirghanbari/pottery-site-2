@@ -25,7 +25,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-stone-50">
-        <div className="container mx-auto px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-12 min-h-[80vh]">
+        <div className="container mx-auto px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-start gap-12 min-h-[80vh]">
           <div className="flex-1 max-w-lg">
             <p className="eyebrow">Handmade in studio</p>
             <h1 className="mt-4 mb-6 leading-tight">
@@ -40,7 +40,7 @@ export default function Home() {
               <button className="btn-outline" onClick={() => navigate('/about')}>Our Story</button>
             </div>
           </div>
-          <div className="flex-1 w-full lg:h-[70vh] rounded-xl overflow-hidden shadow-xl bg-stone-200">
+          <div className="flex-1 w-full lg:h-[60vh] rounded-xl overflow-hidden shadow-xl bg-stone-200">
             <img
               src="/assets/pottery/art-01.jpg"
               alt="Featured pottery piece"
@@ -99,7 +99,7 @@ export default function Home() {
               return (
                 <div key={piece.id} className="piece-card">
                   <div className="piece-card-image">
-                    <img src={piece.image_url} alt={piece.title} loading="lazy" />
+                    <img src={`${import.meta.env.BASE_URL}${piece.image_url.replace(/^\//, '')}`} alt={piece.title} loading="lazy" />
                   </div>
                   <div className="p-5">
                     <h3 className="font-semibold text-stone-900">{piece.title}</h3>

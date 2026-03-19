@@ -49,7 +49,7 @@ export default function Gallery() {
           return (
             <div key={piece.id} className="piece-card">
               <div className="piece-card-image">
-                <img src={piece.image_url} alt={piece.title} loading="lazy" />
+                <img src={`${import.meta.env.BASE_URL}${piece.image_url.replace(/^\//, '')}`} alt={piece.title} loading="lazy" />
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-stone-900">{piece.title}</h3>

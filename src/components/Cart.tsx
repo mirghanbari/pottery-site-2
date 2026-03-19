@@ -29,7 +29,7 @@ export default function Cart() {
             items.map(({ piece, quantity }) => (
               <div key={piece.id} className="flex gap-3 items-start">
                 <img
-                  src={piece.image_url}
+                  src={`${import.meta.env.BASE_URL}${piece.image_url.replace(/^\//, '')}`}
                   alt={piece.title}
                   className="w-16 h-16 object-cover shrink-0 bg-stone-100"
                 />
